@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$" />
+  </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES5" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="SvnBranchConfigurationManager">
+    <option name="myConfigurationMap">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="branchUrls">
+                <list>
+                  <option value="file:///C:/Users/luo/Desktop/SVN%E7%89%88%E6%9C%AC%E5%BA%93/branches" />
+                  <option value="file:///C:/Users/luo/Desktop/SVN%E7%89%88%E6%9C%AC%E5%BA%93/src" />
+                  <option value="file:///C:/Users/luo/Desktop/SVN%E7%89%88%E6%9C%AC%E5%BA%93/tags" />
+                </list>
+              </option>
+              <option name="trunkUrl" value="file:///C:/Users/luo/Desktop/SVN版本库/trunk" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

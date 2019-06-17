@@ -1,0 +1,50 @@
+package com.easybuy.other;
+
+import org.patchca.word.RandomWordFactory;
+
+/*
+ *该类的功能以及特点描述：电影订票系统 产生验证码文本内容设置
+ *该类是否被编译测试：否
+ *@see(与之相关联的类)：   来源：
+ *                     中间：
+ *                     去处：
+ *开发公司或单位：成007个人
+ *版权：成007
+
+ *@author(作者)：成007
+ *@since（该文件使用的jdk）：JDK1.8
+ *@version（版本）：1.0
+ *@数据库查询方式：mysql+hibernate
+ *@date(开发日期)：2018/6/20
+ *改进：
+ *最后更改日期：
+ */
+public class CaptchaWordFactory extends RandomWordFactory {
+
+	private String defaultValue = "";
+	
+	private boolean isDefaultState = false; // 默认为非固定值状态
+	
+	public CaptchaWordFactory() {
+		
+		// 文本范围和长度
+		characters = "abcdefskmnwx23456789";
+		minLength = 4;
+		maxLength = 4;
+	}
+	
+	public CaptchaWordFactory(String defaultValue) {
+		
+		this.defaultValue = defaultValue;
+		this.isDefaultState = true; //开启绑定值状态 
+	}
+	
+	public String getNextWord() {
+		
+		if(isDefaultState) {
+			return this.defaultValue; // 返回固定值
+		} else {
+			return super.getNextWord();
+		}
+	}
+}
