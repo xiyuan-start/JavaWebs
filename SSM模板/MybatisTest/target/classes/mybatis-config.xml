@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!-- 1、mybatis使用properties来引入外部properties配置文件的内容
+    resource 引入类路径下资源
+    url 引入网络路径或磁盘路径下资源 -->
+    <properties resource="db.properties"></properties>
+
+    <!-- 2、settings包含很多重要的设置项
+             setting标识具体的设置项
+                 name表示设置项的名字
+                 value表示设置项的值 -->
+    <!--这里设置日志输出方式-->
+    <settings>
+        <setting name="logImpl" value="LOG4J" />
+    </settings>
+
+    <!-- 3、typeAliases 为java类型起别名，别名不区分大小写
+              typeAlias 为某个具体的java类型取别名
+                   type java类的全类名，默认别名就是类名小写
+                   alias 自定义别名 -->
+    <!-- 在xml中 mapper中返回结果可以使用该别名  这里使用User 等于 con.luo.Model.User-->
+    <typeAliases>
+    <package name="com.luo.Model"/>
+    </typeAliases>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC" />
+            <!-- 配置数据库连接信息 -->
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}" />
+                <property name="url" value="${jdbc.url}" />
+                <property name="username" value="${jdbc.name}" />
+                <property name="password" value="${jdbc.password}" />
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!--配置映射文件-->
+    <mappers>
+        <mapper resource="src/com/luo/MybatisMappings/UserMapper.xml"></mapper>
+    </mappers>
+</configuration>

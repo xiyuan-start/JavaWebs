@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+    <class catalog="java" name="com.luo.Model.UserEntity" table="user" schema="mybatis">
+        <id name="id" column="id"/>
+        <property name="name" column="name"/>
+        <property name="password" column="password"/>
+    </class>
+</hibernate-mapping>
